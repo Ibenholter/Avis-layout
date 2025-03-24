@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    margin-top: 80px;
+    background-color: #ededed;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    /* Vi bruker position fixed for at navbar alltid skal synes i toppen */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    /* Pass på at navbaren ligger "over" annet innhold med z-index */
+    z-index: 1;
+}
+
+nav {
+    background-color: rgb(183, 51, 51);
+}
+
+nav a,
+nav button {
+    background-color: inherit;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 20px;
+    border: none;
+    font-family: Teko;
+    font-weight: 100;
+}
+
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: antiquewhite;
+    padding: 20px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+.dropdown-content a {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+article {
+    min-height: 100px;
+    grid-column: span 3;
+    font-size: 70px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+    padding: 15px;
+
+}
+
+article.large {
+    grid-column: span 7;
+    font-size: 50px;
+}
+
+article.xlarge {
+    grid-column: span 12;
+    
+}
+
+#rødTekst {
+    color: rgb(236, 61, 61);
+}
+
+article.small {
+    grid-column: span 5;
+    font-size: 50px;
+}
+
+.lys article {
+    background-color: white;
+    color: black;
+}
+
+
+.mork article {
+    background-color: rgb(105, 105, 105);
+    color: white;
+}
+
+.mork {
+    background-color: rgb(39, 38, 38);
+}
+
+
+
